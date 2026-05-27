@@ -121,6 +121,14 @@
       position: relative;
       z-index: 1;
     }
+
+    .cta-primary {
+      background: #6c5ce7;
+    }
+
+    .cta-secondary {
+      background: rgba(255,255,255,0.1);
+    }
   </style>
 </head>
 
@@ -129,7 +137,7 @@
 <header>
   <div class="glow"></div>
 
-  <!-- LOGO NOW IN ROOT -->
+  <!-- LOGO (ROOT) -->
   <img src="logo.png" alt="VALLEY X Logo" class="logo" />
 
   <h1>VALLEY X</h1>
@@ -138,13 +146,23 @@
     A Phoenix-based community ecosystem connecting local businesses, culture, and rewards through real-world engagement.
   </p>
 
+  <!-- HERO CTA FUNNEL -->
   <div class="buttons">
-    <a href="https://t.me/+g6pkl9dx06o3YzYx">Join Telegram</a>
-    <a href="https://pump.fun/coin/5Nxz4DHi4fa1kcBmbj35jkA8LJrAefC1ScQrpdkGpump">View Token</a>
-    <a href="https://forms.gle/xEcnoYgvNX2HFyEs7" target="_blank">Apply as Merchant</a>
+    <a class="cta-primary" href="https://t.me/+g6pkl9dx06o3YzYx" onclick="trackClick('telegram_click')">
+      Join Telegram
+    </a>
+
+    <a class="cta-secondary" href="https://pump.fun/coin/5Nxz4DHi4fa1kcBmbj35jkA8LJrAefC1ScQrpdkGpump" onclick="trackClick('token_click')">
+      View Token
+    </a>
+
+    <a class="cta-primary" href="https://forms.gle/xEcnoYgvNX2HFyEs7" target="_blank" onclick="trackClick('merchant_click')">
+      Apply as Merchant
+    </a>
   </div>
 </header>
 
+<!-- ABOUT -->
 <section>
   <h2>What is VALLEY X?</h2>
   <div class="card">
@@ -153,6 +171,7 @@
   </div>
 </section>
 
+<!-- FEATURES -->
 <section>
   <h2>Core Features</h2>
 
@@ -162,6 +181,7 @@
   <div class="card">Culture + crypto integration</div>
 </section>
 
+<!-- VISION -->
 <section>
   <h2>Vision</h2>
   <div class="card">
@@ -169,6 +189,7 @@
   </div>
 </section>
 
+<!-- MERCHANT FUNNEL -->
 <section id="merchant">
   <h2>Apply as a Merchant</h2>
 
@@ -192,15 +213,23 @@
       Submit your business application using the form below. Our team will review and contact you.
     </p>
 
-    <a href="https://forms.gle/xEcnoYgvNX2HFyEs7" target="_blank">
+    <a href="https://forms.gle/xEcnoYgvNX2HFyEs7" target="_blank" onclick="trackClick('merchant_section_click')">
       Submit Merchant Application
     </a>
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
   © 2026 VALLEY X — Built for community and culture.
 </footer>
+
+<!-- FUNNEL TRACKING (PHASE 1) -->
+<script>
+function trackClick(eventName) {
+  console.log("VALLEY X EVENT:", eventName, "TIME:", new Date().toISOString());
+}
+</script>
 
 </body>
 </html>
