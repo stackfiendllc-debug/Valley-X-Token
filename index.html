@@ -1,220 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Valley X Token Dashboard</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VALLEY X</title>
 
-<style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #060912;
-  color: white;
-}
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: radial-gradient(circle at top, #141428, #0b0b0f);
+      color: #ffffff;
+      text-align: center;
+      overflow-x: hidden;
+    }
 
-/* HEADER */
-.header {
-  padding: 25px;
-  text-align: center;
-  background: #0f172a;
-  border-bottom: 1px solid #1f2a44;
-}
+    header {
+      padding: 90px 20px 60px;
+      position: relative;
+    }
 
-.title {
-  font-size: 32px;
-  font-weight: bold;
-}
+    .logo {
+      width: 130px;
+      height: auto;
+      margin-bottom: 15px;
+      animation: float 4s ease-in-out infinite;
+      filter: drop-shadow(0 0 10px rgba(108,92,231,0.6));
+    }
 
-.subtitle {
-  font-size: 14px;
-  opacity: 0.75;
-  margin-top: 5px;
-}
+    h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+      opacity: 0;
+      animation: fadeIn 1.2s ease forwards;
+    }
 
-.live-dot {
-  height: 10px;
-  width: 10px;
-  background: #00ff99;
-  border-radius: 50%;
-  display: inline-block;
-  margin-right: 6px;
-  animation: pulse 1.2s infinite;
-}
+    .subtitle {
+      color: #b3b3b3;
+      max-width: 600px;
+      margin: 10px auto;
+      line-height: 1.6;
+      opacity: 0;
+      animation: fadeIn 1.8s ease forwards;
+    }
 
-@keyframes pulse {
-  0% { opacity: 1; }
-  50% { opacity: 0.2; }
-  100% { opacity: 1; }
-}
+    .buttons {
+      margin-top: 30px;
+      opacity: 0;
+      animation: fadeIn 2.2s ease forwards;
+    }
 
-/* LAYOUT */
-.container {
-  max-width: 900px;
-  margin: auto;
-  padding: 20px;
-  display: grid;
-  gap: 15px;
-}
+    a {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 20px;
+      background: #6c5ce7;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
 
-.card {
-  background: #111a2e;
-  border: 1px solid #22304d;
-  border-radius: 12px;
-  padding: 15px;
-}
+    a:hover {
+      background: #7d6df0;
+      transform: translateY(-2px);
+    }
 
-/* BUTTON */
-.button {
-  display: inline-block;
-  padding: 12px 16px;
-  background: #00ff99;
-  color: black;
-  font-weight: bold;
-  border-radius: 10px;
-  text-decoration: none;
-  margin-top: 10px;
-}
+    section {
+      padding: 50px 20px;
+    }
 
-/* MINT TEXT */
-.mint {
-  font-size: 12px;
-  word-break: break-all;
-  opacity: 0.8;
-}
+    .card {
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(10px);
+      margin: 10px auto;
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 650px;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
 
-/* FEED */
-.feed {
-  max-height: 260px;
-  overflow-y: auto;
-}
+    footer {
+      padding: 30px;
+      font-size: 12px;
+      color: #777;
+    }
 
-.item {
-  padding: 8px;
-  border-bottom: 1px solid #22304d;
-  font-size: 13px;
-  opacity: 0.9;
-}
-</style>
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+
+    .glow {
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      background: #6c5ce7;
+      filter: blur(120px);
+      opacity: 0.15;
+      top: -100px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 0;
+    }
+
+    header * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-primary {
+      background: #6c5ce7;
+    }
+
+    .cta-secondary {
+      background: rgba(255,255,255,0.1);
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
-<div class="header">
-  <div class="title">🔥 Valley X Live Dashboard</div>
-  <div class="subtitle">
-    <span class="live-dot"></span>
-    PRE-DEX LIVE MODE • Pump.fun Phase Tracking
-  </div>
-</div>
+<header>
+  <div class="glow"></div>
 
-<!-- MAIN -->
-<div class="container">
+  <!-- LOGO (ROOT) -->
+  <img src="logo.png" alt="VALLEY X Logo" class="logo" />
 
-  <!-- TOKEN INFO -->
-  <div class="card">
-    <h3>💰 Token Info</h3>
+  <h1>VALLEY X</h1>
 
-    <p><b>Mint Address:</b></p>
-    <div class="mint">
-      4G72cw8r5YgLjaH7xjzHK8JA8duwUqq2vj9u9bkjMGCg
-    </div>
+  <p class="subtitle">
+    A Phoenix-based community ecosystem connecting local businesses, culture, and rewards through real-world engagement.
+  </p>
 
-    <a class="button"
-       href="https://pump.fun/coin/4G72cw8r5YgLjaH7xjzHK8JA8duwUqq2vj9u9bkjMGCg"
-       target="_blank">
-      🚀 Buy on Pump.fun
+  <!-- HERO CTA FUNNEL -->
+  <div class="buttons">
+    <a class="cta-primary" href="https://t.me/+g6pkl9dx06o3YzYx" onclick="trackClick('telegram_click')">
+      Join Telegram
+    </a>
+
+    <a class="cta-secondary" href="https://pump.fun/coin/5Nxz4DHi4fa1kcBmbj35jkA8LJrAefC1ScQrpdkGpump" onclick="trackClick('token_click')">
+      View Token
+    </a>
+
+    <a class="cta-primary" href="https://forms.gle/xEcnoYgvNX2HFyEs7" target="_blank" onclick="trackClick('merchant_click')">
+      Apply as Merchant
     </a>
   </div>
+</header>
 
-  <!-- STATUS -->
+<!-- ABOUT -->
+<section>
+  <h2>What is VALLEY X?</h2>
   <div class="card">
-    <h3>📊 Token Status</h3>
-    <p id="status">Loading token state...</p>
+    VALLEY X is building a local-first ecosystem where users earn rewards through engagement, 
+    business visits, and community participation.
   </div>
+</section>
 
-  <!-- LIVE FEED -->
+<!-- FEATURES -->
+<section>
+  <h2>Core Features</h2>
+
+  <div class="card">Community-driven engagement system</div>
+  <div class="card">Local business rewards & perks</div>
+  <div class="card">Phoenix-first ecosystem rollout</div>
+  <div class="card">Culture + crypto integration</div>
+</section>
+
+<!-- VISION -->
+<section>
+  <h2>Vision</h2>
   <div class="card">
-    <h3>🔥 Live Activity Feed</h3>
-    <div class="feed" id="feed">
-      <div class="item">System initializing blockchain listener...</div>
-      <div class="item">Connecting to Pump.fun bonding curve...</div>
-      <div class="item">Awaiting first Dexscreener indexing signal...</div>
-    </div>
+    To build a real-world connected digital economy where businesses and communities grow together through rewards and participation.
   </div>
+</section>
 
-</div>
+<!-- MERCHANT FUNNEL -->
+<section id="merchant">
+  <h2>Apply as a Merchant</h2>
 
+  <div class="card">
+    Join the VALLEY X ecosystem and start attracting new customers through community-driven rewards and engagement.
+
+    <br><br>
+
+    <strong>What you get:</strong>
+    <ul style="text-align:left; max-width:500px; margin:10px auto; color:#b3b3b3;">
+      <li>Increased local customer traffic</li>
+      <li>Free community promotion</li>
+      <li>Reward-based loyalty system</li>
+      <li>Access to VALLEY X community network</li>
+    </ul>
+
+    <br>
+
+    <strong>How to apply:</strong>
+    <p>
+      Submit your business application using the form below. Our team will review and contact you.
+    </p>
+
+    <a href="https://forms.gle/xEcnoYgvNX2HFyEs7" target="_blank" onclick="trackClick('merchant_section_click')">
+      Submit Merchant Application
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  © 2026 VALLEY X — Built for community and culture.
+</footer>
+
+<!-- FUNNEL TRACKING (PHASE 1) -->
 <script>
-
-// -----------------------------
-// TOKEN ADDRESS
-// -----------------------------
-const tokenMint = "4G72cw8r5YgLjaH7xjzHK8JA8duwUqq2vj9u9bkjMGCg";
-
-// -----------------------------
-// STATUS ENGINE (Stage Logic)
-// -----------------------------
-const status = document.getElementById("status");
-
-let stage = 1; // 1 = early Pump.fun phase
-
-function updateStatus() {
-  if (stage === 1) {
-    status.innerText =
-      "🟡 Stage 1: Token active on Pump.fun. Not yet indexed on Dexscreener. Early bonding curve phase.";
-  } else if (stage === 2) {
-    status.innerText =
-      "🟠 Stage 2: Early trading detected. Market activity increasing.";
-  } else {
-    status.innerText =
-      "🟢 Stage 3: Token indexed and visible on major analytics platforms.";
-  }
+function trackClick(eventName) {
+  console.log("VALLEY X EVENT:", eventName, "TIME:", new Date().toISOString());
 }
-
-updateStatus();
-
-// -----------------------------
-// LIVE FEED SIMULATION
-// (placeholder until real Solana API integration)
-// -----------------------------
-const feed = document.getElementById("feed");
-
-const events = [
-  "New wallet interaction detected on Solana",
-  "Pump.fun bonding curve update processed",
-  "Small buy transaction recorded",
-  "Token transfer confirmed",
-  "Early market interest detected",
-  "Contract activity validated",
-  "Pre-index trading signal logged"
-];
-
-function pushEvent() {
-  const msg = events[Math.floor(Math.random() * events.length)];
-
-  const div = document.createElement("div");
-  div.className = "item";
-
-  div.innerText =
-    "🔥 " + msg + " • " + new Date().toLocaleTimeString();
-
-  feed.prepend(div);
-
-  if (feed.children.length > 12) {
-    feed.removeChild(feed.lastChild);
-  }
-
-  // subtle progression simulation (optional)
-  if (Math.random() > 0.85 && stage === 1) {
-    stage = 2;
-    updateStatus();
-  }
-}
-
-setInterval(pushEvent, 3500);
-
 </script>
 
 </body>
