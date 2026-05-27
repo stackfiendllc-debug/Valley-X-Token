@@ -1,47 +1,68 @@
 # VALLEY X
 
-VALLEY X is a Phoenix-based community token focused on local business rewards, culture, and blockchain-powered engagement.
+VALLEY X is a Phoenix-based community ecosystem focused on local business rewards, culture, and real-world engagement powered by digital tokens and community participation.
 
-## Vision
-Building a local-first crypto ecosystem that connects communities, creators, and businesses through rewards, events, and digital ownership.
+---
 
-## Ecosystem Goals
-- Merchant rewards system
-- Community engagement incentives
-- Local business partnerships
-- Telegram automation tools
-- Event integrations
-- Valley Underground Media collaborations
+## 🌐 Vision
+Building a local-first digital economy where communities, creators, and businesses connect through rewards, engagement, and cultural participation.
 
-## Official Links
+---
 
-### Telegram
+## ⚡ What VALLEY X Does
+
+- Connects local businesses with customers through rewards
+- Encourages community engagement and participation
+- Builds real-world utility around culture and events
+- Creates a Phoenix-based digital ecosystem
+
+---
+
+## 🧩 Ecosystem Components
+
+### 👥 Community
+Telegram + social channels driving engagement and growth
+
+### 🏪 Merchants
+Local businesses offering rewards, discounts, and perks
+
+### 🎁 Rewards System
+Users earn Valley Rewards Points through:
+- Purchases
+- Engagement
+- Events
+- Community participation
+
+---
+
+## 📍 Getting Started
+
+### Join the Community
 https://t.me/+g6pkl9dx06o3YzYx
 
-### Pump.fun
+### View Token
 https://pump.fun/coin/5Nxz4DHi4fa1kcBmbj35jkA8LJrAefC1ScQrpdkGpump
 
-## Current Status
+---
+
+## 📚 Documentation
+
+- [Rewards System](docs/rewards-system.md)
+- [Merchant Guide](docs/merchant-guide.md)
+- [Project Overview](docs/overview.md)
+- [Roadmap](roadmap/roadmap.md)
+
+---
+
+## 🚀 Status
 - Token launched on pump.fun
-- Community infrastructure in development
-- Merchant utility system planning underway
+- Community live on Telegram
+- Ecosystem infrastructure in development
+- Merchant system being designed
 
-## Roadmap
+---
 
-### Phase 1
-- Launch token
-- Establish Telegram community
-- Build social presence
-- Publish GitHub infrastructure
+## 🔮 Vision
+VALLEY X aims to evolve into a real-world connected ecosystem where local businesses and communities grow together through engagement-based rewards and culture-driven participation.
 
-### Phase 2
-- Merchant rewards prototype
-- Community engagement system
-- Telegram utility bots
-- Business outreach
-
-### Phase 3
-- Phoenix business integrations
-- Events and partnerships
-- Mobile/web utility expansion
-- Ecosystem scaling
+Starting in Phoenix — expanding through real-world adoption.
