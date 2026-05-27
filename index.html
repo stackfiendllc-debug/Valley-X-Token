@@ -2,317 +2,176 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VALLEY X</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Valley X Token</title>
 
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: radial-gradient(circle at top, #141428, #0b0b0f);
+      background: #0b0f1a;
       color: #ffffff;
       text-align: center;
-      overflow-x: hidden;
     }
 
     header {
-      padding: 90px 20px 60px;
-      position: relative;
-    }
-
-    .logo {
-      width: 130px;
-      margin-bottom: 15px;
-      animation: float 4s ease-in-out infinite;
-      filter: drop-shadow(0 0 10px rgba(108,92,231,0.6));
+      padding: 60px 20px;
     }
 
     h1 {
-      font-size: 48px;
+      color: #00ffcc;
+      font-size: 42px;
       margin-bottom: 10px;
-      opacity: 0;
-      animation: fadeIn 1.2s ease forwards;
     }
 
-    .subtitle {
-      color: #b3b3b3;
-      max-width: 600px;
+    p {
+      max-width: 800px;
       margin: 10px auto;
       line-height: 1.6;
-      opacity: 0;
-      animation: fadeIn 1.8s ease forwards;
+      color: #cfd6e4;
     }
 
-    .buttons {
-      margin-top: 30px;
-      opacity: 0;
-      animation: fadeIn 2.2s ease forwards;
-    }
-
-    a {
+    .buttons a {
       display: inline-block;
       margin: 10px;
       padding: 12px 20px;
-      background: #6c5ce7;
-      color: white;
+      border-radius: 8px;
       text-decoration: none;
-      border-radius: 10px;
+      background: #00ffcc;
+      color: #000;
       font-weight: bold;
-      transition: transform 0.2s ease, background 0.2s ease;
-    }
-
-    a:hover {
-      background: #7d6df0;
-      transform: translateY(-2px);
     }
 
     section {
-      padding: 50px 20px;
+      padding: 40px 20px;
+      border-top: 1px solid #1f2a44;
     }
 
-    .card {
-      background: rgba(255,255,255,0.05);
-      backdrop-filter: blur(10px);
-      margin: 10px auto;
-      padding: 20px;
-      border-radius: 12px;
-      max-width: 650px;
-      border: 1px solid rgba(255,255,255,0.08);
+    h2 {
+      color: #00ffcc;
+      margin-bottom: 15px;
+    }
+
+    .box {
+      background: #111827;
+      padding: 15px;
+      border-radius: 10px;
+      display: inline-block;
+      margin-top: 10px;
+      word-break: break-word;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin: 10px 0;
+      color: #cfd6e4;
     }
 
     footer {
       padding: 30px;
+      color: #666;
       font-size: 12px;
-      color: #777;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes float {
-      0% { transform: translateY(0px); }
-      50% { transform: translateY(-10px); }
-      100% { transform: translateY(0px); }
-    }
-
-    .glow {
-      position: absolute;
-      width: 400px;
-      height: 400px;
-      background: #6c5ce7;
-      filter: blur(120px);
-      opacity: 0.15;
-      top: -100px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 0;
-    }
-
-    header * {
-      position: relative;
-      z-index: 1;
-    }
-
-    .cta-primary { background: #6c5ce7; }
-    .cta-secondary { background: rgba(255,255,255,0.1); }
-
-    /* =========================
-       🔥 LIVE DASHBOARD ADD-ON
-    ========================== */
-
-    .live-dot {
-      height: 10px;
-      width: 10px;
-      background: #00ff99;
-      border-radius: 50%;
-      display: inline-block;
-      margin-right: 6px;
-      animation: pulse 1.2s infinite;
-    }
-
-    @keyframes pulse {
-      0% { opacity: 1; }
-      50% { opacity: 0.2; }
-      100% { opacity: 1; }
-    }
-
-    .dashboard {
-      margin-top: 30px;
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .status {
-      margin-top: 10px;
-      font-size: 14px;
-      color: #b3b3b3;
-    }
-
-    .feed {
-      max-height: 220px;
-      overflow-y: auto;
-      margin-top: 10px;
-      text-align: left;
-    }
-
-    .item {
-      padding: 8px;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-      font-size: 13px;
-      color: #ddd;
-    }
-
-    .mint {
-      font-size: 11px;
-      opacity: 0.7;
-      word-break: break-all;
+    a {
+      color: #00ffcc;
     }
   </style>
 </head>
 
 <body>
 
-<header>
-  <div class="glow"></div>
+  <!-- HERO -->
+  <header>
+    <h1>VALLEY X TOKEN</h1>
 
-  <img src="logo.png" alt="VALLEY X Logo" class="logo" />
+    <p>
+      A Solana-based digital asset powering the Valley X ecosystem of automation tools, bots, and decentralized utilities.
+    </p>
 
-  <h1>VALLEY X</h1>
+    <div class="buttons">
+      <a href="https://dexscreener.com/solana/8fp2dv7yp36zelxi3zc6jipq7tlkvx3h19nkuzz2991l" target="_blank">
+        📊 Live Chart
+      </a>
 
-  <p class="subtitle">
-    A Phoenix-based community ecosystem connecting local businesses, culture, and rewards through real-world engagement.
-  </p>
+      <a href="https://raydium.io/swap/?inputMint=sol&outputMint=5Nxz4DHi4fa1kcBmbj35jkA8LJrAefC1ScQrpdkGpump" target="_blank">
+        💰 Buy Token
+      </a>
 
-  <div class="buttons">
-    <a class="cta-primary" href="https://t.me/+g6pkl9dx06o3YzYx">
-      Join Telegram
-    </a>
+      <a href="https://t.me/" target="_blank">
+        👥 Community
+      </a>
+    </div>
+  </header>
 
-    <a class="cta-secondary"
-       href="https://pump.fun/coin/5Nxz4DHi4fa1kcBmbj35jkA8LJrAefC1ScQrpdkGpump">
-      View Token
-    </a>
+  <!-- CONTRACT -->
+  <section>
+    <h2>Contract Address</h2>
 
-    <a class="cta-primary" href="https://forms.gle/xEcnoYgvNX2HFyEs7">
-      Apply as Merchant
-    </a>
-  </div>
-
-  <!-- 🔥 LIVE DASHBOARD (INTEGRATED) -->
-  <div class="dashboard">
-
-    <div class="card">
-      <h3>🔥 VALLEY X Live Network</h3>
-      <div class="status" id="status">
-        🟡 Stage 1: Pump.fun active — waiting for Dexscreener indexing
-      </div>
-
-      <div class="mint">
-        Mint: 4G72cw8r5YgLjaH7xjzHK8JA8duwUqq2vj9u9bkjMGCg
-      </div>
+    <div class="box">
+      5Nxz4DHi4fa1kcBmbj35jkA8LJrAefC1ScQrpdkGpump
     </div>
 
-    <div class="card">
-      <h3><span class="live-dot"></span> Live Activity Feed</h3>
-      <div class="feed" id="feed">
-        <div class="item">System initializing VALLEY X tracker...</div>
-        <div class="item">Connecting to Pump.fun bonding curve...</div>
-        <div class="item">Awaiting first indexed market activity...</div>
-      </div>
-    </div>
+    <p>
+      Network: Solana
+    </p>
+  </section>
 
-  </div>
-</header>
+  <!-- MARKET -->
+  <section>
+    <h2>Live Market Data</h2>
 
-<!-- ABOUT -->
-<section>
-  <h2>What is VALLEY X?</h2>
-  <div class="card">
-    VALLEY X is building a local-first ecosystem where users earn rewards through engagement, 
-    business visits, and community participation.
-  </div>
-</section>
+    <p>
+      Valley X Token is actively tracked on decentralized Solana markets via DexScreener.
+    </p>
 
-<!-- FEATURES -->
-<section>
-  <h2>Core Features</h2>
-  <div class="card">Community-driven engagement system</div>
-  <div class="card">Local business rewards & perks</div>
-  <div class="card">Phoenix-first ecosystem rollout</div>
-  <div class="card">Culture + crypto integration</div>
-</section>
+    <a href="https://dexscreener.com/solana/8fp2dv7yp36zelxi3zc6jipq7tlkvx3h19nkuzz2991l" target="_blank">
+      View Live Chart
+    </a>
+  </section>
 
-<!-- VISION -->
-<section>
-  <h2>Vision</h2>
-  <div class="card">
-    To build a real-world connected digital economy where businesses and communities grow together.
-  </div>
-</section>
+  <!-- ECOSYSTEM -->
+  <section>
+    <h2>Valley X Ecosystem</h2>
 
-<!-- MERCHANT -->
-<section>
-  <h2>Apply as a Merchant</h2>
-  <div class="card">
-    Join VALLEY X ecosystem and get community-driven customer exposure.
+    <p>
+      Valley X Token is part of a growing ecosystem that includes automation tools, trading bots,
+      and digital systems currently being developed and integrated into the platform.
+    </p>
+  </section>
 
-    <ul style="text-align:left; color:#b3b3b3;">
-      <li>Increased local traffic</li>
-      <li>Community promotion</li>
-      <li>Reward system integration</li>
+  <!-- ROADMAP -->
+  <section>
+    <h2>Roadmap</h2>
+
+    <ul>
+      <li><b>Phase 1:</b> Token Launch + DexScreener Listing</li>
+      <li><b>Phase 2:</b> Ecosystem Integration (Bots + Tools)</li>
+      <li><b>Phase 3:</b> Community Growth</li>
+      <li><b>Phase 4:</b> Partnerships & Expansion</li>
     </ul>
+  </section>
 
-    <a href="https://forms.gle/xEcnoYgvNX2HFyEs7">Submit Application</a>
-  </div>
-</section>
+  <!-- COMMUNITY -->
+  <section>
+    <h2>Join The Community</h2>
 
-<footer>
-  © 2026 VALLEY X — Built for community and culture.
-</footer>
+    <p>Be part of the early Valley X movement.</p>
 
-<script>
-const feed = document.getElementById("feed");
-const status = document.getElementById("status");
+    <p>
+      <a href="https://t.me/" target="_blank">Telegram</a> |
+      <a href="https://twitter.com/" target="_blank">X (Twitter)</a>
+    </p>
+  </section>
 
-const events = [
-  "New wallet interaction detected",
-  "Pump.fun bonding curve update",
-  "Small buy order recorded",
-  "Token transfer confirmed",
-  "Early trading signal detected",
-  "Solana program activity logged"
-];
-
-function addEvent() {
-  const msg = events[Math.floor(Math.random() * events.length)];
-
-  const div = document.createElement("div");
-  div.className = "item";
-  div.innerText = "🔥 " + msg + " • " + new Date().toLocaleTimeString();
-
-  feed.prepend(div);
-
-  if (feed.children.length > 10) {
-    feed.removeChild(feed.lastChild);
-  }
-}
-
-setInterval(addEvent, 3500);
-
-// stage logic (auto progression simulation)
-let stage = 1;
-
-setInterval(() => {
-  if (Math.random() > 0.8 && stage === 1) {
-    stage = 2;
-    status.innerText =
-      "🟠 Stage 2: Early trading detected — activity increasing across Pump.fun";
-  }
-}, 8000);
-</script>
+  <!-- FOOTER -->
+  <footer>
+    © 2026 Valley X Token. All rights reserved.
+  </footer>
 
 </body>
 </html>
