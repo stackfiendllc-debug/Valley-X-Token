@@ -9,35 +9,46 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #0b0b0f;
+      background: radial-gradient(circle at top, #141428, #0b0b0f);
       color: #ffffff;
       text-align: center;
+      overflow-x: hidden;
     }
 
+    /* HERO */
     header {
-      padding: 60px 20px;
+      padding: 90px 20px 60px;
+      position: relative;
     }
 
     .logo {
-      width: 120px;
+      width: 130px;
       height: auto;
       margin-bottom: 15px;
+      animation: float 4s ease-in-out infinite;
+      filter: drop-shadow(0 0 10px rgba(108,92,231,0.6));
     }
 
     h1 {
-      font-size: 42px;
+      font-size: 48px;
       margin-bottom: 10px;
+      opacity: 0;
+      animation: fadeIn 1.2s ease forwards;
     }
 
-    p {
+    .subtitle {
       color: #b3b3b3;
       max-width: 600px;
       margin: 10px auto;
-      line-height: 1.5;
+      line-height: 1.6;
+      opacity: 0;
+      animation: fadeIn 1.8s ease forwards;
     }
 
     .buttons {
       margin-top: 30px;
+      opacity: 0;
+      animation: fadeIn 2.2s ease forwards;
     }
 
     a {
@@ -47,24 +58,29 @@
       background: #6c5ce7;
       color: white;
       text-decoration: none;
-      border-radius: 8px;
+      border-radius: 10px;
       font-weight: bold;
+      transition: transform 0.2s ease, background 0.2s ease;
     }
 
     a:hover {
       background: #7d6df0;
+      transform: translateY(-2px);
     }
 
+    /* SECTIONS */
     section {
-      padding: 40px 20px;
+      padding: 50px 20px;
     }
 
     .card {
-      background: #151520;
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(10px);
       margin: 10px auto;
       padding: 20px;
-      border-radius: 10px;
-      max-width: 600px;
+      border-radius: 12px;
+      max-width: 650px;
+      border: 1px solid rgba(255,255,255,0.08);
     }
 
     footer {
@@ -72,18 +88,58 @@
       font-size: 12px;
       color: #777;
     }
+
+    /* ANIMATIONS */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+
+    /* BACKGROUND GLOW */
+    .glow {
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      background: #6c5ce7;
+      filter: blur(120px);
+      opacity: 0.15;
+      top: -100px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 0;
+    }
+
+    header * {
+      position: relative;
+      z-index: 1;
+    }
+
   </style>
 </head>
 
 <body>
 
 <header>
+  <div class="glow"></div>
+
   <!-- LOGO -->
   <img src="branding/logo.png" alt="VALLEY X Logo" class="logo" />
 
   <h1>VALLEY X</h1>
 
-  <p>
+  <p class="subtitle">
     A Phoenix-based community ecosystem connecting local businesses, culture, and rewards through real-world engagement.
   </p>
 
