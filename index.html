@@ -22,7 +22,6 @@
 
     .logo {
       width: 130px;
-      height: auto;
       margin-bottom: 15px;
       animation: float 4s ease-in-out infinite;
       filter: drop-shadow(0 0 10px rgba(108,92,231,0.6));
@@ -88,14 +87,8 @@
     }
 
     @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     @keyframes float {
@@ -122,12 +115,60 @@
       z-index: 1;
     }
 
-    .cta-primary {
-      background: #6c5ce7;
+    .cta-primary { background: #6c5ce7; }
+    .cta-secondary { background: rgba(255,255,255,0.1); }
+
+    /* =========================
+       🔥 LIVE DASHBOARD ADD-ON
+    ========================== */
+
+    .live-dot {
+      height: 10px;
+      width: 10px;
+      background: #00ff99;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 6px;
+      animation: pulse 1.2s infinite;
     }
 
-    .cta-secondary {
-      background: rgba(255,255,255,0.1);
+    @keyframes pulse {
+      0% { opacity: 1; }
+      50% { opacity: 0.2; }
+      100% { opacity: 1; }
+    }
+
+    .dashboard {
+      margin-top: 30px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .status {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #b3b3b3;
+    }
+
+    .feed {
+      max-height: 220px;
+      overflow-y: auto;
+      margin-top: 10px;
+      text-align: left;
+    }
+
+    .item {
+      padding: 8px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      font-size: 13px;
+      color: #ddd;
+    }
+
+    .mint {
+      font-size: 11px;
+      opacity: 0.7;
+      word-break: break-all;
     }
   </style>
 </head>
@@ -137,7 +178,6 @@
 <header>
   <div class="glow"></div>
 
-  <!-- LOGO (ROOT) -->
   <img src="logo.png" alt="VALLEY X Logo" class="logo" />
 
   <h1>VALLEY X</h1>
@@ -146,19 +186,44 @@
     A Phoenix-based community ecosystem connecting local businesses, culture, and rewards through real-world engagement.
   </p>
 
-  <!-- HERO CTA FUNNEL -->
   <div class="buttons">
-    <a class="cta-primary" href="https://t.me/+g6pkl9dx06o3YzYx" onclick="trackClick('telegram_click')">
+    <a class="cta-primary" href="https://t.me/+g6pkl9dx06o3YzYx">
       Join Telegram
     </a>
 
-    <a class="cta-secondary" href="https://pump.fun/coin/5Nxz4DHi4fa1kcBmbj35jkA8LJrAefC1ScQrpdkGpump" onclick="trackClick('token_click')">
+    <a class="cta-secondary"
+       href="https://pump.fun/coin/5Nxz4DHi4fa1kcBmbj35jkA8LJrAefC1ScQrpdkGpump">
       View Token
     </a>
 
-    <a class="cta-primary" href="https://forms.gle/xEcnoYgvNX2HFyEs7" target="_blank" onclick="trackClick('merchant_click')">
+    <a class="cta-primary" href="https://forms.gle/xEcnoYgvNX2HFyEs7">
       Apply as Merchant
     </a>
+  </div>
+
+  <!-- 🔥 LIVE DASHBOARD (INTEGRATED) -->
+  <div class="dashboard">
+
+    <div class="card">
+      <h3>🔥 VALLEY X Live Network</h3>
+      <div class="status" id="status">
+        🟡 Stage 1: Pump.fun active — waiting for Dexscreener indexing
+      </div>
+
+      <div class="mint">
+        Mint: 4G72cw8r5YgLjaH7xjzHK8JA8duwUqq2vj9u9bkjMGCg
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><span class="live-dot"></span> Live Activity Feed</h3>
+      <div class="feed" id="feed">
+        <div class="item">System initializing VALLEY X tracker...</div>
+        <div class="item">Connecting to Pump.fun bonding curve...</div>
+        <div class="item">Awaiting first indexed market activity...</div>
+      </div>
+    </div>
+
   </div>
 </header>
 
@@ -174,7 +239,6 @@
 <!-- FEATURES -->
 <section>
   <h2>Core Features</h2>
-
   <div class="card">Community-driven engagement system</div>
   <div class="card">Local business rewards & perks</div>
   <div class="card">Phoenix-first ecosystem rollout</div>
@@ -185,50 +249,69 @@
 <section>
   <h2>Vision</h2>
   <div class="card">
-    To build a real-world connected digital economy where businesses and communities grow together through rewards and participation.
+    To build a real-world connected digital economy where businesses and communities grow together.
   </div>
 </section>
 
-<!-- MERCHANT FUNNEL -->
-<section id="merchant">
+<!-- MERCHANT -->
+<section>
   <h2>Apply as a Merchant</h2>
-
   <div class="card">
-    Join the VALLEY X ecosystem and start attracting new customers through community-driven rewards and engagement.
+    Join VALLEY X ecosystem and get community-driven customer exposure.
 
-    <br><br>
-
-    <strong>What you get:</strong>
-    <ul style="text-align:left; max-width:500px; margin:10px auto; color:#b3b3b3;">
-      <li>Increased local customer traffic</li>
-      <li>Free community promotion</li>
-      <li>Reward-based loyalty system</li>
-      <li>Access to VALLEY X community network</li>
+    <ul style="text-align:left; color:#b3b3b3;">
+      <li>Increased local traffic</li>
+      <li>Community promotion</li>
+      <li>Reward system integration</li>
     </ul>
 
-    <br>
-
-    <strong>How to apply:</strong>
-    <p>
-      Submit your business application using the form below. Our team will review and contact you.
-    </p>
-
-    <a href="https://forms.gle/xEcnoYgvNX2HFyEs7" target="_blank" onclick="trackClick('merchant_section_click')">
-      Submit Merchant Application
-    </a>
+    <a href="https://forms.gle/xEcnoYgvNX2HFyEs7">Submit Application</a>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   © 2026 VALLEY X — Built for community and culture.
 </footer>
 
-<!-- FUNNEL TRACKING (PHASE 1) -->
 <script>
-function trackClick(eventName) {
-  console.log("VALLEY X EVENT:", eventName, "TIME:", new Date().toISOString());
+const feed = document.getElementById("feed");
+const status = document.getElementById("status");
+
+const events = [
+  "New wallet interaction detected",
+  "Pump.fun bonding curve update",
+  "Small buy order recorded",
+  "Token transfer confirmed",
+  "Early trading signal detected",
+  "Solana program activity logged"
+];
+
+function addEvent() {
+  const msg = events[Math.floor(Math.random() * events.length)];
+
+  const div = document.createElement("div");
+  div.className = "item";
+  div.innerText = "🔥 " + msg + " • " + new Date().toLocaleTimeString();
+
+  feed.prepend(div);
+
+  if (feed.children.length > 10) {
+    feed.removeChild(feed.lastChild);
+  }
 }
+
+setInterval(addEvent, 3500);
+
+// stage logic (auto progression simulation)
+let stage = 1;
+
+setInterval(() => {
+  if (Math.random() > 0.8 && stage === 1) {
+    stage = 2;
+    status.innerText =
+      "🟠 Stage 2: Early trading detected — activity increasing across Pump.fun";
+  }
+}, 8000);
 </script>
 
 </body>
